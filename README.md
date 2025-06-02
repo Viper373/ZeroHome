@@ -165,21 +165,6 @@ docker-compose down
 
 如需批量导入环境变量，可参考 Vercel/Netlify 官方文档或 CLI 工具说明。
 
-### 5.6. 🐙 GitHub Pages 部署
-
-1. 安装依赖（如未安装）：
-   ```bash
-   pnpm add -D gh-pages
-   ```
-2. 一键导出并推送到 gh-pages 分支：
-   ```bash
-   pnpm deploy:gh
-   ```
-3. 在 GitHub 仓库设置中，Pages 选择 `gh-pages` 分支作为发布源。
-4. 访问 `https://Viper373.github.io/ZeroHome/` 查看部署效果。
-
-> ⚠️ 注意：GitHub Pages 只支持静态导出（`next export`），不支持 SSR/动态 API 路由。所有页面和数据需为静态内容。
-
 ## 6. 目录结构
 
 ### 关键目录和文件说明
@@ -191,8 +176,6 @@ ZeroHome/ # 项目根目录
 ├── app/ # Next.js App Router 核心目录
 │ ├── (admin)/ # 后台管理页面组 (路由组，不影响URL路径)
 │ │ └── admin/ # 后台管理实际路由 /admin/*
-│ ├── (main)/ # 前台主要页面组 (路由组)
-│ │ └── (home)/ # 首页特定布局组
 │ │ ├── layout.tsx
 │ │ └── page.tsx # 主页 /
 │ ├── layout.tsx # 应用的根布局

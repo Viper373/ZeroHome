@@ -1,12 +1,9 @@
 /** @type {import('next').NextConfig} */
-const isGhPages = process.env.DEPLOY_TARGET === 'gh-pages';
-const repoName = 'ZeroHome';
 
 const nextConfig = {
-  output: 'export',
   reactStrictMode: false,
   images: {
-    domains: ['placeholder.com'],
+    domains: ['img.viper3.top'],
     unoptimized: true,
   },
   eslint: {
@@ -15,12 +12,6 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  ...(isGhPages
-    ? {
-        assetPrefix: `/${repoName}/`,
-        basePath: `/${repoName}`,
-      }
-    : {}),
-}
+};
 
-export default nextConfig
+export default nextConfig;

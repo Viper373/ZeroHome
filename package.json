@@ -5,11 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "export": "next export",
-    "predeploy": "pnpm build && pnpm export",
-    "deploy:gh": "DEPLOY_TARGET=gh-pages pnpm predeploy && gh-pages -d out",
-    "lint": "next lint"
+    "start": "next start"
   },
   "dependencies": {
     "@cloudflare/workers-types": "latest",
@@ -95,7 +91,6 @@
     "i18next-parser": "^9.3.0",
     "postcss": "^8.5.4",
     "tailwindcss": "^3.4.17",
-    "typescript": "latest",
-    "gh-pages": "^6.0.0"
+    "typescript": "latest"
   }
 }
