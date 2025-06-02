@@ -12,6 +12,7 @@ import { AuthProvider } from "@/components/auth-provider";
 import { Toaster } from "@/components/ui/sonner";
 import { Footer } from "@/components/footer";
 import { ConsoleBadge } from "@/components/console-badge";
+import useAutoThemeByBeijingTime from '@/hooks/use-auto-theme-by-beijing-time';
 
 // 'export const metadata: Metadata = { ... }' // 这部分在 'use client' 组件中不能这样导出
 
@@ -22,6 +23,8 @@ export default function RootLayout({
 }) {
   const pathname = usePathname(); // 3. 使用 usePathname
   const isAdminPage = pathname ? pathname.startsWith('/admin') : false; // 确保 pathname 存在
+
+  useAutoThemeByBeijingTime();
 
   useEffect(() => {
     if (isAdminPage) {
