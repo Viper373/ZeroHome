@@ -29,7 +29,7 @@
         "name": "Mail",
         "url": "mailto:2483523414@qq.com",
         "icon": "MdEmail",
-        "color": ""
+        "color": "#7B68EE"
       },
       {
         "name": "QQ",
@@ -47,7 +47,7 @@
         "name": "Blog",
         "url": "https://blog.viper3.top",
         "icon": "FaBlog",
-        "color": ""
+        "color": "#FF8C00"
       },
       {
         "name": "Steam",

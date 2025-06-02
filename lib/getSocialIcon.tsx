@@ -103,7 +103,7 @@ const ReactIconsLoader = ({ lib, iconName, iconSize, color, className }: { lib: 
   return null; 
 };
 
-export function getSocialIconComponent(iconName: string, iconSize: number = 20, className?: string) {
+export function getSocialIconComponent(iconName: string, iconSize: number = 20, color?: string, className?: string) {
   let explicitColor: string | undefined = undefined;
 
   if (!iconName || typeof iconName !== 'string') {
@@ -151,7 +151,7 @@ export function getSocialIconComponent(iconName: string, iconSize: number = 20, 
   if (libToLoad) {
     return (
       <Suspense fallback={<AiOutlineLoading3Quarters size={iconSize} className='animate-spin text-muted-foreground'/>}>
-        <ReactIconsLoader lib={libToLoad} iconName={iconToLoad} iconSize={iconSize} color={explicitColor} className={className} />
+        <ReactIconsLoader lib={libToLoad} iconName={iconToLoad} iconSize={iconSize} color={color || explicitColor} className={className} />
       </Suspense>
     );
   }

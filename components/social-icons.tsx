@@ -16,6 +16,7 @@ interface SocialLinkData {
     name: string;
     url: string;
     icon: string;
+    color?: string;
 }
 
 interface ProfileApiResponse {
@@ -109,7 +110,8 @@ export const SocialIcons = memo(function SocialIcons() {
                                         {getSocialIconComponent(
                                             social.icon,
                                             20,
-                                            "text-foreground",
+                                            social.color,
+                                            "text-foreground"
                                         )}
                                     </Suspense>
                                 </motion.a>
