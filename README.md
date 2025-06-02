@@ -1,3 +1,5 @@
+![ZeroHome](https://socialify.git.ci/Viper373/ZeroHome/image?description=1&forks=1&issues=1&logo=https://img.viper3.top/ZeroHome/logo.png&name=1&owner=1&pulls=1&stargazers=1&theme=Auto)
+
 # 🏝️ ZeroHome
 
 ## 1. 项目概述
