@@ -35,6 +35,11 @@
         "icon": "SiTencentqq"
       },
       {
+        "name": "WeChat",
+        "url": "https://img.viper3.top/user/wechat.png",
+        "icon": "SiWechat"
+      },
+      {
         "name": "Blog",
         "url": "https://blog.viper3.top",
         "icon": "FaBlog"

@@ -245,6 +245,7 @@
     "description": "管理您的个人信息、社交链接等。",
     "saveButton": "保存更改",
     "savingButton": "正在保存...",
+    "savingProfileButton": "正在保存个人资料...",
     "loading": "正在加载个人资料...",
     "loadError": "加载个人资料失败：{{error}}",
     "retryButton": "重试",
