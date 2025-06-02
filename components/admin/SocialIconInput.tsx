@@ -188,11 +188,11 @@ const representativeReactIcons = [
 interface SocialIconInputProps {
   value: string;
   onChange: (value: string) => void;
-  // iconSize can be a prop if different parts of the app need different preview sizes
-  previewIconSize?: number; 
+  previewIconSize?: number;
+  previewColor?: string;
 }
 
-export function SocialIconInput({ value, onChange, previewIconSize = 22 }: SocialIconInputProps) {
+export function SocialIconInput({ value, onChange, previewIconSize = 22, previewColor }: SocialIconInputProps) {
   const [input, setInput] = useState(value || "");
   const [showDropdown, setShowDropdown] = useState(false);
   const [previewIconName, setPreviewIconName] = useState(value || ""); 
@@ -254,7 +254,7 @@ export function SocialIconInput({ value, onChange, previewIconSize = 22 }: Socia
         className="pr-12"
       />
       <div className="absolute right-10 top-1/2 -translate-y-1/2 flex items-center w-7 h-7 justify-center pointer-events-none">
-        {getSocialIconComponent(previewIconName, previewIconSize)}
+        {getSocialIconComponent(previewIconName, previewIconSize, previewColor)}
       </div>
       <Popover>
         <PopoverTrigger asChild>
@@ -279,7 +279,7 @@ export function SocialIconInput({ value, onChange, previewIconSize = 22 }: Socia
               }}
             >
               <span>{s}</span>
-              <span>{getSocialIconComponent(s, previewIconSize)}</span>
+              <span>{getSocialIconComponent(s, previewIconSize, previewColor)}</span>
             </div>
           ))}
         </div>

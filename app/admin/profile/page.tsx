@@ -96,21 +96,22 @@ function SortableSocialLinkItem({ link, index, handleSocialLinkChange, removeSoc
         />
       </div>
       {/* Icon Input and Hint */}
-      <div className="flex flex-col w-full sm:flex-1">
+      <div className="flex flex-col w-full sm:flex-[2]">
         <SocialIconInput
           value={link.icon}
           onChange={val => handleSocialLinkChange(index, 'icon', val)}
+          previewColor={link.color}
         />
       </div>
       {/* Color Input */}
-      <div className="flex flex-col w-full sm:flex-1">
-        <label className="text-xs text-muted-foreground mb-1">颜色</label>
+      <div className="flex flex-row items-center justify-end w-32 sm:w-40 gap-2">
+        <span className="text-xs text-muted-foreground">颜色</span>
         <Input
           type="color"
           value={link.color || '#000000'}
           onChange={e => handleSocialLinkChange(index, 'color', e.target.value)}
-          className="w-12 h-8 p-0 border-none bg-transparent"
-          style={{ minWidth: 48 }}
+          className="w-8 h-8 p-0 border-none bg-transparent"
+          style={{ minWidth: 32 }}
         />
       </div>
       {/* Delete Button */}
