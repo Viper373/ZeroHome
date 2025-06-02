@@ -31,3 +31,8 @@ next-env.d.ts
 
 # cursor
 .cursorignore
+
+# .next build output
+.next
+# out/ 目录用于 gh-pages 部署，不要忽略
+# out
