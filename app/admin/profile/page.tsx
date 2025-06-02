@@ -32,6 +32,7 @@ interface SocialLink {
   name: string;
   url: string;
   icon: string;
+  color?: string;
 }
 
 // Updated ProfileData interface with snake_case to match API and DB
@@ -99,7 +100,17 @@ function SortableSocialLinkItem({ link, index, handleSocialLinkChange, removeSoc
         <SocialIconInput
           value={link.icon}
           onChange={val => handleSocialLinkChange(index, 'icon', val)}
-          // previewIconSize={22} // Default is 22 in the component, can be overridden if needed
+        />
+      </div>
+      {/* Color Input */}
+      <div className="flex flex-col w-full sm:flex-1">
+        <label className="text-xs text-muted-foreground mb-1">颜色</label>
+        <Input
+          type="color"
+          value={link.color || '#000000'}
+          onChange={e => handleSocialLinkChange(index, 'color', e.target.value)}
+          className="w-12 h-8 p-0 border-none bg-transparent"
+          style={{ minWidth: 48 }}
         />
       </div>
       {/* Delete Button */}
@@ -212,7 +223,7 @@ export default function AdminProfilePage() {
   const addSocialLink = () => {
     const currentLinks = Array.isArray(profile.social_links) ? profile.social_links : [];
     // Add new link with a unique id
-    const newLink: SocialLink = { id: crypto.randomUUID(), name: '', url: '', icon: '' };
+    const newLink: SocialLink = { id: crypto.randomUUID(), name: '', url: '', icon: '', color: '' };
     const updatedLinks = [...currentLinks, newLink];
     setProfile(prev => ({ ...prev, social_links: updatedLinks }));
   };
@@ -247,7 +258,7 @@ export default function AdminProfilePage() {
     setSaving(true);
 
     // Create a type for the payload to be sent to the backend, excluding the client-side 'id' for social_links
-    interface SocialLinkPayload { name: string; url: string; icon: string; }
+    interface SocialLinkPayload { name: string; url: string; icon: string; color?: string; }
     interface ProfilePayload extends Omit<ProfileData, 'social_links' | 'steam_api_key' | 'netease_music_u'> {
       social_links?: SocialLinkPayload[];
       // steam_api_key and netease_music_u are not sent from client for update, they are env vars handled by backend if needed

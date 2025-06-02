@@ -22,42 +22,50 @@
       {
         "name": "GitHub",
         "url": "https://github.com/viper373",
-        "icon": "SiGithub"
+        "icon": "SiGithub",
+        "color": ""
       },
       {
         "name": "Mail",
         "url": "mailto:2483523414@qq.com",
-        "icon": "MdEmail"
+        "icon": "MdEmail",
+        "color": ""
       },
       {
         "name": "QQ",
         "url": "https://tool.gljlw.com/qqq/?qq=2483523414",
-        "icon": "SiTencentqq"
+        "icon": "SiTencentqq",
+        "color": ""
       },
       {
         "name": "WeChat",
         "url": "https://img.viper3.top/user/wechat.png",
-        "icon": "SiWechat"
+        "icon": "SiWechat",
+        "color": "#07C160"
       },
       {
         "name": "Blog",
         "url": "https://blog.viper3.top",
-        "icon": "FaBlog"
+        "icon": "FaBlog",
+        "color": ""
       },
       {
         "name": "Steam",
         "url": "https://steamcommunity.com/id/Viper373",
-        "icon": "SiSteam"
+        "icon": "SiSteam",
+        "color": "#04699D"
       },
       {
         "name": "Neteasecloudmusic",
         "url": "https://music.163.com/#/user/home?id=420479371",
-        "icon": "si-neteasecloudmusic"
+        "icon": "si-neteasecloudmusic",
+        "color": ""
       },
       {
         "name": "Douyin",
         "url": "https://www.douyin.com/user/MS4wLjABAAAA9cX9S9wWe5qDolzC9vDuFLFi0jnU4CdJunu5cSOufQU",
-        "icon": "SiTiktok"
+        "icon": "SiTiktok",
+        "color": ""
       }
     ]
   },
