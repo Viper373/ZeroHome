@@ -333,7 +333,8 @@
     "noRecords": "未获取到听歌记录",
     "fetchError": "获取数据失败:",
     "recentPlaysTitle": "最近一周听歌",
-    "playCountUnit": "次"
+    "playCountUnit": "次",
+    "noData": "暂无数据"
   },
   "adminFooter": {
     "titleMain": "页脚内容管理",

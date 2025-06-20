@@ -196,8 +196,6 @@ export const NeteaseMusicStats = memo(function NeteaseMusicStats() {
           uid = profile.profile.netease_user_id;
         }
         
-        console.log('获取到的网易云用户ID:', uid);
-        
         if (!uid) {
           setError(t('neteaseMusic.noUserId'));
           setLoading(false);

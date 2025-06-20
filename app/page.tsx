@@ -111,8 +111,8 @@ export default function Home() {
       >
         {/* Global Background Video - Placed directly under main */}
         <BackgroundVideo 
-          dayVideoSrc="/videos/三花.mp4" 
-          nightVideoSrc="/videos/伊蕾娜.mp4" 
+          dayVideoSrc="/videos/三花.webm" 
+          nightVideoSrc="/videos/伊蕾娜.webm" 
           isActive={true}
         />
 
