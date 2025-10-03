@@ -211,7 +211,7 @@ ZeroHome/ # 项目根目录
 ├── settings.json # 用于存储个人信息的配置文件
 ├── tailwind.config.ts # Tailwind CSS 配置文件
 └── tsconfig.json # TypeScript 编译器配置文件
-
+```
 
 ## 7. 项目截图
 - 亮色模式: ![首页截图](public/images/index1.png)
